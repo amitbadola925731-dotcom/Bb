@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible Tour and Travels - Memorable Journeys & Mountain Escapes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#020617',
+                        },
+                        tealAccent: '#0d9488'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.85) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+        }
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+        }
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 font-sans text-slate-100 antialiased selection:bg-brand-500 selection:text-slate-900">
+
+    <!-- Top Contact Bar -->
+    <div class="bg-navy-900 border-b border-slate-800 text-slate-300 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <a href="tel:+919876543210" class="hover:text-brand-500 transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-brand-500"></i> +91 98765 43210
+                </a>
+                <a href="mailto:info@incredibletours.com" class="hover:text-brand-500 transition-colors hidden sm:flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-brand-500"></i> info@incredibletours.com
+                </a>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:inline text-slate-400"><i class="fa-solid fa-location-dot text-brand-500 mr-1"></i> Tapovan, Rishikesh & New Delhi</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-emerald-400 font-medium flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> 24/7 Travel Assistance</span>
+                <a href="https://wa.me/919876543210" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-2.5 py-0.5 rounded-full text-[11px] flex items-center gap-1 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-navy-800/95 backdrop-blur-md border-b border-slate-800 transition-all shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-500 to-amber-700 flex items-center justify-center text-slate-900 font-extrabold shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-mountain-sun text-2xl"></i>
+                </div>
+                <div>
+                    <div class="text-xl font-black tracking-wider text-white font-serif flex items-center gap-1">
+                        INCREDIBLE <span class="text-brand-500 font-sans font-extrabold text-sm uppercase bg-brand-500/10 px-2 py-0.5 rounded border border-brand-500/20">TOURS</span>
+                    </div>
+                    <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold block">Tour & Travels • Unlimited Destinations</span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#hero" class="hover:text-brand-500 transition-colors">Home</a>
+                <a href="#packages" class="hover:text-brand-500 transition-colors">Packages</a>
+                <a href="#custom-builder" class="hover:text-brand-500 transition-colors">Custom Planner</a>
+                <a href="#estimator" class="hover:text-brand-500 transition-colors">Price Estimator</a>
+                <a href="#testimonials" class="hover:text-brand-500 transition-colors">Reviews</a>
+                <a href="#faq" class="hover:text-brand-500 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Header Action Button -->
+            <div class="hidden lg:flex items-center gap-3">
+                <button onclick="openBookingModal()" class="bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm transition-all shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40">
+                    <i class="fa-solid fa-paper-plane mr-1.5"></i> Plan My Trip
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Button -->
+            <button id="mobileNavToggle" class="md:hidden p-2 text-slate-300 hover:text-white">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileDrawer" class="hidden md:hidden bg-navy-800 border-b border-slate-700 px-6 py-6 space-y-4">
+            <a href="#hero" class="block text-slate-200 font-semibold hover:text-brand-500">Home</a>
+            <a href="#packages" class="block text-slate-200 font-semibold hover:text-brand-500">Explore Packages</a>
+            <a href="#custom-builder" class="block text-slate-200 font-semibold hover:text-brand-500">Build Custom Trip</a>
+            <a href="#estimator" class="block text-slate-200 font-semibold hover:text-brand-500">Cost Estimator</a>
+            <a href="#testimonials" class="block text-slate-200 font-semibold hover:text-brand-500">Testimonials</a>
+            <a href="#faq" class="block text-slate-200 font-semibold hover:text-brand-500">FAQ</a>
+            <button onclick="openBookingModal()" class="w-full bg-brand-500 text-slate-950 font-bold py-3 rounded-xl mt-4">
+                Book / Inquire Now
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center bg-cover bg-center px-4 py-20" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto text-center space-y-8">
+            <span class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/30 text-brand-400 font-bold text-xs uppercase tracking-widest px-4 py-2 rounded-full backdrop-blur-md">
+                <i class="fa-solid fa-sparkles text-brand-500"></i> Premium Tour & Travel Agency
+            </span>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white font-serif leading-tight">
+                Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-brand-500 to-amber-200">Incredible Journeys</span> & Mountain Escapes
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-xl max-w-3xl mx-auto font-light leading-relaxed">
+                From Himalayan trekking and white-water rafting to spiritual pilgrimages and luxury hill station getaways—experience seamless, tailored travel with Incredible Tour and Travels.
+            </p>
+
+            <!-- Dynamic Multi-Criteria Search Filter Bar -->
+            <div class="dark-glass p-4 sm:p-6 rounded-3xl border border-slate-700/80 shadow-2xl text-slate-200 max-w-5xl mx-auto text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+                    <!-- Search Keyword/Destination -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5"><i class="fa-solid fa-location-dot text-brand-500 mr-1"></i> Destination</label>
+                        <select id="filterDest" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <option value="all">All Destinations</option>
+                            <option value="Rishikesh">Rishikesh & Haridwar</option>
+                            <option value="Chopta">Chopta & Tungnath</option>
+                            <option value="Lansdowne">Lansdowne & Garhwal</option>
+                            <option value="Manali">Manali & Solang Valley</option>
+                            <option value="Char Dham">Char Dham Circuit</option>
+                        </select>
+                    </div>
+
+                    <!-- Travel Style / Category -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5"><i class="fa-solid fa-compass text-brand-500 mr-1"></i> Travel Style</label>
+                        <select id="filterStyle" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <option value="all">All Styles</option>
+                            <option value="Adventure">Adventure & Rafting</option>
+                            <option value="Trekking">Trekking & Camping</option>
+                            <option value="Leisure">Scenic Leisure</option>
+                            <option value="Pilgrimage">Spiritual & Yatra</option>
+                        </select>
+                    </div>
+
+                    <!-- Duration Filter -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5"><i class="fa-regular fa-clock text-brand-500 mr-1"></i> Duration</label>
+                        <select id="filterDuration" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <option value="all">Any Duration</option>
+                            <option value="short">1 - 3 Days</option>
+                            <option value="medium">4 - 6 Days</option>
+                            <option value="long">7+ Days</option>
+                        </select>
+                    </div>
+
+                    <!-- Max Budget Filter -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5"><i class="fa-solid fa-wallet text-brand-500 mr-1"></i> Max Budget/Person</label>
+                        <select id="filterBudget" class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <option value="999999">Any Budget</option>
+                            <option value="5000">Under ₹5,000</option>
+                            <option value="10000">Under ₹10,000</option>
+                            <option value="25000">Under ₹25,000</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit / Search Button -->
+                    <div>
+                        <button id="applyFiltersBtn" class="w-full bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-500/20">
+                            <i class="fa-solid fa-magnifying-glass"></i> Search Packages
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4 border-b border-slate-800 pb-8">
+            <div>
+                <span class="text-brand-500 font-bold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Handpicked Itineraries</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-serif text-white mt-3">Featured Tour Packages</h2>
+            </div>
+            <p class="text-slate-400 text-sm max-w-md">
+                Carefully structured travel packages with pre-arranged transfers, expert guides, quality stays, and transparent pricing.
+            </p>
+        </div>
+
+        <!-- Package Grid Container -->
+        <div id="packagesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamic package cards injected via JS -->
+        </div>
+    </section>
+
+    <section id="custom-builder" class="py-24 bg-navy-800 border-y border-slate-800 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Tailor-Made Holidays</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-serif text-white">Build Your Custom Package</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">Design your unique itinerary in seconds. Select destinations, preferred comfort levels, activities, and let our travel experts organize it for you.</p>
+            </div>
+
+            <!-- Builder Stepper / Card -->
+            <div class="dark-glass p-6 sm:p-10 rounded-3xl border border-slate-700 max-w-4xl mx-auto shadow-2xl">
+                <form id="customBuilderForm" class="space-y-8">
+                    <!-- Step 1: Destination Selection -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-brand-500 mb-3"><i class="fa-solid fa-map-location-dot mr-1"></i> Step 1: Select Preferred Destinations</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 p-3.5 rounded-xl hover:border-brand-500 transition-all text-center flex flex-col items-center gap-2 group">
+                                <input type="checkbox" value="Rishikesh" class="builder-dest accent-brand-500 hidden">
+                                <i class="fa-solid fa-water-ladder text-xl text-slate-400 group-hover:text-brand-500"></i>
+                                <span class="text-xs font-bold text-slate-200">Rishikesh</span>
+                            </label>
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 p-3.5 rounded-xl hover:border-brand-500 transition-all text-center flex flex-col items-center gap-2 group">
+                                <input type="checkbox" value="Chopta Trek" class="builder-dest accent-brand-500 hidden">
+                                <i class="fa-solid fa-mountain text-xl text-slate-400 group-hover:text-brand-500"></i>
+                                <span class="text-xs font-bold text-slate-200">Chopta / Tungnath</span>
+                            </label>
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 p-3.5 rounded-xl hover:border-brand-500 transition-all text-center flex flex-col items-center gap-2 group">
+                                <input type="checkbox" value="Lansdowne" class="builder-dest accent-brand-500 hidden">
+                                <i class="fa-solid fa-tree text-xl text-slate-400 group-hover:text-brand-500"></i>
+                                <span class="text-xs font-bold text-slate-200">Lansdowne</span>
+                            </label>
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 p-3.5 rounded-xl hover:border-brand-500 transition-all text-center flex flex-col items-center gap-2 group">
+                                <input type="checkbox" value="Char Dham" class="builder-dest accent-brand-500 hidden">
+                                <i class="fa-solid fa-gopuram text-xl text-slate-400 group-hover:text-brand-500"></i>
+                                <span class="text-xs font-bold text-slate-200">Char Dham Yatra</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Hotel & Comfort Preference -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-brand-500 mb-2"><i class="fa-solid fa-hotel mr-1"></i> Step 2: Accommodation Tier</label>
+                            <select id="builderHotel" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                                <option value="Standard Guesthouse / Deluxe Tents">Standard (Clean Guesthouses / Tents)</option>
+                                <option value="3-Star Deluxe Hotels">3-Star Deluxe Hotels & Resorts</option>
+                                <option value="4-Star Luxury Properties">4-Star & Premium Luxury Stays</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-brand-500 mb-2"><i class="fa-solid fa-car mr-1"></i> Vehicle Preference</label>
+                            <select id="builderTransport" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                                <option value="Private Sedan Cab">Private Sedan Cab (Dzire/Etios)</option>
+                                <option value="Private SUV Cab">Private SUV Cab (Innova/Ertiga)</option>
+                                <option value="12-16 Seater Tempo Traveller">Tempo Traveller (Group Trips)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Special Activities -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-brand-500 mb-3"><i class="fa-solid fa-volleyball mr-1"></i> Step 3: Preferred Activities & Experiences</label>
+                        <div class="flex flex-wrap gap-3">
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 px-4 py-2 rounded-lg text-xs font-medium hover:border-brand-500 flex items-center gap-2">
+                                <input type="checkbox" value="River Rafting & Cliff Jump" class="builder-act accent-brand-500">
+                                <span>River Rafting & Cliff Jump</span>
+                            </label>
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 px-4 py-2 rounded-lg text-xs font-medium hover:border-brand-500 flex items-center gap-2">
+                                <input type="checkbox" value="Ganga Aarti & Spiritual Tour" class="builder-act accent-brand-500">
+                                <span>Ganga Aarti Experience</span>
+                            </label>
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 px-4 py-2 rounded-lg text-xs font-medium hover:border-brand-500 flex items-center gap-2">
+                                <input type="checkbox" value="High Altitude Trekking" class="builder-act accent-brand-500">
+                                <span>Guided Alpine Trekking</span>
+                            </label>
+                            <label class="cursor-pointer border border-slate-700 bg-slate-900/60 px-4 py-2 rounded-lg text-xs font-medium hover:border-brand-500 flex items-center gap-2">
+                                <input type="checkbox" value="Bonfire & Music Night" class="builder-act accent-brand-500">
+                                <span>Bonfire & Camping Night</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submission -->
+                    <button type="button" onclick="submitCustomBuilder()" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-slate-950 font-extrabold py-3.5 rounded-xl text-sm transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Request Custom Quote via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="estimator" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-brand-500 font-bold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Instant Budget Estimation</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-serif text-white leading-tight">Dynamic Trip Cost Estimator</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Plan your holiday budget transparently. Adjust parameters like traveler count, nights, room categories, and optional add-ons to see real-time price updates.
+                </p>
+
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-3 text-sm text-slate-300">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+                        <span>Instant real-time calculation with no hidden charges</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-300">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+                        <span>Automatic tier discounts for groups of 4+ travelers</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-300">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+                        <span>Customizable vehicle and meal options</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estimator Calculator Card -->
+            <div class="lg:col-span-7 bg-navy-800 border border-slate-700/80 p-6 sm:p-10 rounded-3xl shadow-2xl space-y-6">
+                <!-- Select Package Basis -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">1. Base Region / Route</label>
+                    <select id="calcBasePackage" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                        <option value="chopta" data-base="7500">Chopta & Tungnath Himalayan Trek (Base: ₹7,500)</option>
+                        <option value="rishikesh" data-base="3200">Rishikesh Rafting & Beach Camping (Base: ₹3,200)</option>
+                        <option value="lansdowne" data-base="6000">Lansdowne Hill Station Escape (Base: ₹6,000)</option>
+                        <option value="chardham" data-base="22000">Char Dham Yatra Circuit (Base: ₹22,000)</option>
+                    </select>
+                </div>
+
+                <!-- Sliders for Travelers -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <div class="flex justify-between text-xs font-bold text-slate-400 uppercase mb-2">
+                            <span>Adults (12+ yrs)</span>
+                            <span id="adultsCount" class="text-brand-500 font-extrabold text-sm">2</span>
+                        </div>
+                        <input type="range" id="calcAdults" min="1" max="15" value="2" class="w-full accent-brand-500 cursor-pointer h-2 bg-slate-700 rounded-lg">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-bold text-slate-400 uppercase mb-2">
+                            <span>Children (5-11 yrs)</span>
+                            <span id="kidsCount" class="text-brand-500 font-extrabold text-sm">0</span>
+                        </div>
+                        <input type="range" id="calcKids" min="0" max="6" value="0" class="w-full accent-brand-500 cursor-pointer h-2 bg-slate-700 rounded-lg">
+                    </div>
+                </div>
+
+                <!-- Hotel Tier & Vehicle Type -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-2">2. Hotel Comfort Level</label>
+                        <select id="calcHotelTier" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                            <option value="1" data-mult="1.0">Budget / Standard Tents (Base)</option>
+                            <option value="1.3" data-mult="1.3">Deluxe 3-Star (+30%)</option>
+                            <option value="1.7" data-mult="1.7">Luxury 4-Star / Resorts (+70%)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase mb-2">3. Transport Preference</label>
+                        <select id="calcTransport" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                            <option value="0">Shared / Bus Transfer</option>
+                            <option value="2500">Private Sedan Cab (+₹2,500 total)</option>
+                            <option value="4500">Private SUV Cab (+₹4,500 total)</option>
+                            <option value="7000">Tempo Traveller (+₹7,000 total)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Add-on Extras -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-3">4. Optional Activity Add-ons</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <label class="cursor-pointer p-3 bg-slate-900 rounded-xl border border-slate-700/80 hover:border-brand-500 flex items-center gap-2">
+                            <input type="checkbox" id="addRafting" value="1200" class="calc-addon accent-brand-500 rounded">
+                            <span class="text-xs text-slate-300 font-semibold">16km Rafting (+₹1.2k/p)</span>
+                        </label>
+                        <label class="cursor-pointer p-3 bg-slate-900 rounded-xl border border-slate-700/80 hover:border-brand-500 flex items-center gap-2">
+                            <input type="checkbox" id="addZip" value="1800" class="calc-addon accent-brand-500 rounded">
+                            <span class="text-xs text-slate-300 font-semibold">Zip-lining (+₹1.8k/p)</span>
+                        </label>
+                        <label class="cursor-pointer p-3 bg-slate-900 rounded-xl border border-slate-700/80 hover:border-brand-500 flex items-center gap-2">
+                            <input type="checkbox" id="addBonfire" value="800" class="calc-addon accent-brand-500 rounded">
+                            <span class="text-xs text-slate-300 font-semibold">Bonfire Night (+₹800/p)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Final Cost Breakdown Display -->
+                <div class="pt-6 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase block">Estimated Net Price</span>
+                        <div class="flex items-baseline gap-2">
+                            <span id="calculatedTotal" class="text-3xl sm:text-4xl font-extrabold text-brand-400">₹15,000</span>
+                            <span class="text-xs text-slate-400">incl. GST</span>
+                        </div>
+                    </div>
+                    <button type="button" onclick="openBookingFromCalculator()" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-slate-950 font-extrabold px-6 py-3 rounded-xl transition-all shadow-lg shadow-brand-500/20">
+                        Book Calculated Trip
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-navy-800 border-y border-slate-800 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-500 font-bold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Traveler Feedback</span>
+                <h2 class="text-3xl sm:text-5xl font-black font-serif text-white">Memories Made With Us</h2>
+                <p class="text-slate-400 text-sm">Read what happy adventurers and families have to say about their experience with Incredible Tour and Travels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="dark-glass p-8 rounded-3xl border border-slate-700/80 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">"Our Chopta-Tungnath trek was executed perfectly. The camp accommodation was clean and warm, and our guide Ramesh was super helpful!"</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 border border-brand-500/40 text-brand-400 font-bold flex items-center justify-center text-sm">
+                            SD
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Siddharth D.</h4>
+                            <span class="text-xs text-slate-500">New Delhi • Chopta Trek</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="dark-glass p-8 rounded-3xl border border-slate-700/80 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">"Rishikesh river rafting with Incredible Tours was safe, thrilling, and extremely well managed. The pickup cab was right on time."</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 border border-brand-500/40 text-brand-400 font-bold flex items-center justify-center text-sm">
+                            PR
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Pooja Sharma</h4>
+                            <span class="text-xs text-slate-500">Chandigarh • Rishikesh Adventure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="dark-glass p-8 rounded-3xl border border-slate-700/80 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-sm gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">"Organized Char Dham Yatra for my senior parents. Incredible Tours made all VIP darshan arrangements smooth. Highly recommended!"</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-500/20 border border-brand-500/40 text-brand-400 font-bold flex items-center justify-center text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Amitav K.</h4>
+                            <span class="text-xs text-slate-500">Mumbai • Char Dham Yatra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 px-4 max-w-4xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-16 space-y-3">
+            <span class="text-brand-500 font-bold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Common Questions</span>
+            <h2 class="text-3xl sm:text-5xl font-black font-serif text-white">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4" id="faqContainer">
+            <!-- FAQ 1 -->
+            <div class="border border-slate-800 rounded-2xl bg-navy-800 overflow-hidden">
+                <button onclick="toggleFaqAccordion(this)" class="w-full p-6 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition-colors">
+                    <span>How do I confirm my booking with Incredible Tour and Travels?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60">
+                    You can easily confirm your booking by submitting our online booking form or reaching out directly on WhatsApp. A 25% advance token payment is required to lock in your hotels and cabs, with the remaining balance due upon arrival.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="border border-slate-800 rounded-2xl bg-navy-800 overflow-hidden">
+                <button onclick="toggleFaqAccordion(this)" class="w-full p-6 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition-colors">
+                    <span>What is the cancellation and refund policy?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60">
+                    Cancellations made 7 or more days prior to departure receive a 90% refund of the advance amount. In case of unexpected weather or landslides, we offer free rescheduling for up to 1 year.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="border border-slate-800 rounded-2xl bg-navy-800 overflow-hidden">
+                <button onclick="toggleFaqAccordion(this)" class="w-full p-6 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition-colors">
+                    <span>Can we customize the day-wise itinerary?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60">
+                    Yes! All our tour packages are 100% customizable. Use our 'Build Your Custom Package' feature above or speak directly with our tour itinerary planners.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="border border-slate-800 rounded-2xl bg-navy-800 overflow-hidden">
+                <button onclick="toggleFaqAccordion(this)" class="w-full p-6 text-left font-bold text-slate-200 flex justify-between items-center hover:bg-slate-800/50 transition-colors">
+                    <span>Are meals included in the tour packages?</span>
+                    <i class="fa-solid fa-chevron-down text-brand-500 transition-transform duration-300"></i>
+                </button>
+                <div class="hidden p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-slate-800/60">
+                    Most packages include complimentary breakfast and dinner (MAP Plan) at hotel stays, as well as all fresh hot meals during trekking and campsite stays.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 border-t border-slate-800 text-slate-400 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+            <!-- Brand -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-500 text-slate-900 font-extrabold flex items-center justify-center">
+                        <i class="fa-solid fa-mountain-sun text-lg"></i>
+                    </div>
+                    <span class="text-lg font-bold text-white font-serif tracking-wider">INCREDIBLE TOURS</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Your trusted travel partner for unforgettable mountain treks, rafting expeditions, customized getaways, and pilgrimage yatras.
+                </p>
+                <div class="flex gap-4 text-slate-400 text-lg pt-2">
+                    <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-500 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Tour Destinations</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#packages" class="hover:text-brand-500 transition-colors">Chopta & Tungnath Trek</a></li>
+                    <li><a href="#packages" class="hover:text-brand-500 transition-colors">Rishikesh River Rafting</a></li>
+                    <li><a href="#packages" class="hover:text-brand-500 transition-colors">Lansdowne Hill Station</a></li>
+                    <li><a href="#packages" class="hover:text-brand-500 transition-colors">Char Dham Yatra Circuit</a></li>
+                    <li><a href="#packages" class="hover:text-brand-500 transition-colors">Manali Solang Getaway</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Head Office</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-start gap-2.5">
+                        <i class="fa-solid fa-location-dot text-brand-500 mt-0.5"></i>
+                        <span>Main Badrinath Highway, Tapovan, Rishikesh, Uttarakhand 249192</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-phone text-brand-500"></i>
+                        <span>+91 98765 43210 / +91 91234 56789</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-envelope text-brand-500"></i>
+                        <span>inquiry@incredibletours.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Seasonal Discounts</h4>
+                <p class="text-xs text-slate-400 mb-3">Subscribe to get secret discount codes for weekend group tours.</p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');" class="space-y-2">
+                    <input type="email" placeholder="Enter your email" required class="w-full bg-slate-800 border border-slate-700 text-xs text-white rounded-lg px-3.5 py-2.5 focus:outline-none focus:ring-1 focus:ring-brand-500">
+                    <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-slate-950 font-bold text-xs py-2.5 rounded-lg transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+            <p>© 2026 Incredible Tour and Travels. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:underline">Terms & Conditions</a>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Refund Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Package Details Modal -->
+    <div id="detailsModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-navy-800 border border-slate-700 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <button onclick="closeDetailsModal()" class="absolute top-4 right-4 z-10 w-9 h-9 bg-slate-900 hover:bg-slate-800 text-slate-300 rounded-full flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalDetailsContainer">
+                <!-- Dynamic Modal Content Injected JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-navy-800 border border-slate-700 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="space-y-4 mb-6">
+                <span class="text-brand-500 font-bold text-xs uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Instant Reservation</span>
+                <h3 class="text-2xl font-black font-serif text-white">Book Your Journey</h3>
+                <p class="text-xs text-slate-400">Fill in your basic information to get an instant call back or WhatsApp reservation receipt.</p>
+            </div>
+
+            <form id="bookingForm" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Full Name *</label>
+                        <input type="text" id="bookName" required placeholder="John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Phone Number *</label>
+                        <input type="tel" id="bookPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Package / Destination</label>
+                        <select id="bookPackage" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                            <option>Chopta & Tungnath Himalayan Trek</option>
+                            <option>Rishikesh River Rafting & Beach Camping</option>
+                            <option>Lansdowne Hill Station Escape</option>
+                            <option>Char Dham Yatra Express Circuit</option>
+                            <option>Manali & Solang Valley Adventure</option>
+                            <option>Custom Tailored Package</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Departure Date *</label>
+                        <input type="date" id="bookDate" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Adult Travelers</label>
+                        <input type="number" id="bookAdults" min="1" value="2" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">Children (5-11 yrs)</label>
+                        <input type="number" id="bookKids" min="0" value="0" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Special Preferences / Requests</label>
+                    <textarea id="bookNotes" rows="3" placeholder="Cab pickup location, meal preferences, extra activities..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-brand-500"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <button type="submit" class="flex-1 bg-brand-500 hover:bg-brand-600 text-slate-950 font-extrabold py-3 rounded-xl transition-colors text-sm">
+                        Submit Reservation
+                    </button>
+                    <button type="button" onclick="sendWhatsAppBooking()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Book via WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Packages Master Data
+        const allPackages = [
+            {
+                id: 'chopta',
+                title: 'Chopta & Tungnath Himalayan Trek',
+                destination: 'Chopta',
+                style: 'Trekking',
+                durationDays: 4,
+                durationText: '4 Days / 3 Nights',
+                price: 7500,
+                rating: '4.9',
+                reviewsCount: 142,
+                image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
+                highlights: ['Highest Shiva Temple (Tungnath)', 'Chandrashila Summit (4,000m)', 'Deoriatal Alpine Lake', 'Camping in Meadows'],
+                inclusions: ['Haridwar Pickup & Drop Cab', '3 Nights Meadow Camping Stays', 'Breakfast & Dinner', 'Certified Alpine Trek Guide'],
+                exclusions: ['Personal Expenses & Ponies', 'Lunch during travel', 'GST 5%'],
+                itinerary: [
+                    'Day 1: Drive from Haridwar/Rishikesh to Chopta base via Devprayag.',
+                    'Day 2: Trek to Tungnath Temple & Chandrashila summit. Evening campfire.',
+                    'Day 3: Trek to pristine Deoriatal Emerald Lake.',
+                    'Day 4: Scenic return drive to Haridwar.'
+                ]
+            },
+            {
+                id: 'rishikesh',
+                title: 'Rishikesh River Rafting & Beach Camping',
+                destination: 'Rishikesh',
+                style: 'Adventure',
+                durationDays: 2,
+                durationText: '2 Days / 1 Night',
+                price: 3200,
+                rating: '5.0',
+                reviewsCount: 280,
+                image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+                highlights: ['16km Shivpuri Rapid Rafting', 'Cliff Jumping & Body Surfing', 'Riverside Luxury Tents', 'Live DJ & Evening Bonfire'],
+                inclusions: ['1 Night Dome/Swiss Camping', 'All 3 Meals + Evening Snacks', '16km Rafting Equipment & Safety Gear', 'Camp Games'],
+                exclusions: ['Transport to Campsite', 'Extra Zip-lining activity'],
+                itinerary: [
+                    'Day 1: Check-in at campsite, lunch, beach volleyball, evening bonfire with music.',
+                    'Day 2: Morning breakfast, 16km thrilling rafting run, cliff jumping, checkout.'
+                ]
+            },
+            {
+                id: 'lansdowne',
+                title: 'Lansdowne Hill Station Scenic Getaway',
+                destination: 'Lansdowne',
+                style: 'Leisure',
+                durationDays: 3,
+                durationText: '3 Days / 2 Nights',
+                price: 6000,
+                rating: '4.8',
+                reviewsCount: 98,
+                image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+                highlights: ['Bhulla Tal Lake Boating', 'Tip-In-Top Sunset Viewpoint', 'Pine Forest Walks', 'Garhwal Rifles Heritage'],
+                inclusions: ['2 Nights Resort Accommodation', 'Daily Breakfast', 'Sightseeing Transfers', 'All Permit Fees'],
+                exclusions: ['Boating Ticket charges', 'Personal Laundry/Shopping'],
+                itinerary: [
+                    'Day 1: Scenic drive to Lansdowne, check-in, visit Ridge area.',
+                    'Day 2: Explore Bhulla Lake, St. John Church, and Tip-in-Top point.',
+                    'Day 3: Leisurely breakfast and return transfer.'
+                ]
+            },
+            {
+                id: 'chardham',
+                title: 'Char Dham Yatra Sacred Circuit',
+                destination: 'Char Dham',
+                style: 'Pilgrimage',
+                durationDays: 10,
+                durationText: '10 Days / 9 Nights',
+                price: 22000,
+                rating: '4.9',
+                reviewsCount: 115,
+                image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=800&q=80',
+                highlights: ['Yamunotri, Gangotri, Kedarnath, Badrinath', 'VIP Darshan Assistance', 'Dedicated Private Cab Driver', 'Hotels with Veg Meals'],
+                inclusions: ['9 Nights Hotel Stays', 'Breakfast & Dinner Included', 'AC Cab Haridwar to Haridwar', 'Biometric Registration Help'],
+                exclusions: ['Helicopter tickets to Kedarnath', 'Pony/Palki charges'],
+                itinerary: [
+                    'Day 1-2: Haridwar to Barkot & Yamunotri Temple Trek.',
+                    'Day 3-4: Uttarkashi to Gangotri Temple Darshan.',
+                    'Day 5-7: Guptkashi to Kedarnath Ji Temple Stay & Trek.',
+                    'Day 8-10: Badrinath Ji Temple, Mana Village & Haridwar Return.'
+                ]
+            },
+            {
+                id: 'manali',
+                title: 'Manali & Solang Valley Adventure',
+                destination: 'Manali',
+                style: 'Adventure',
+                durationDays: 5,
+                durationText: '5 Days / 4 Nights',
+                price: 9500,
+                rating: '4.9',
+                reviewsCount: 165,
+                image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80',
+                highlights: ['Atal Tunnel & Sissu Day Trip', 'Solang Valley Paragliding', 'Old Manali Cafe Crawl', 'Hadimba Temple Tour'],
+                inclusions: ['Delhi Volvos / Private Cab', '4 Nights Hotel Stay', 'Breakfast & Dinner', 'Solang Sightseeing'],
+                exclusions: ['Paragliding / Snow Suit Rentals', 'Rohtang Pass Permit extra'],
+                itinerary: [
+                    'Day 1: Overnight bus/cab journey to Manali.',
+                    'Day 2: Local Manali sightseeing & Hadimba Temple.',
+                    'Day 3: Solang Valley adventure sports & Atal Tunnel.',
+                    'Day 4: Kasol & Manikaran Sahib day tour.',
+                    'Day 5: Shopping at Mall Road and evening departure.'
+                ]
+            }
+        ];
+
+        // Render Packages Cards
+        function renderPackages(packages) {
+            const container = document.getElementById('packagesContainer');
+            if(packages.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 border border-dashed border-slate-800 rounded-3xl">
+                        <i class="fa-solid fa-compass text-4xl text-slate-600 mb-3 block"></i>
+                        <h3 class="text-lg font-bold text-slate-300">No tour packages match your filters</h3>
+                        <p class="text-xs text-slate-500 mt-1">Try resetting search filters to view available trips.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = packages.map(pkg => `
+                <div class="bg-navy-800 rounded-3xl overflow-hidden border border-slate-700/80 hover:border-brand-500/60 shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-52 overflow-hidden">
+                            <img src="${pkg.image}" alt="${pkg.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md text-brand-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                ${pkg.style}
+                            </span>
+                            <span class="absolute top-3 right-3 bg-slate-950/80 backdrop-blur-md text-amber-400 text-xs font-black px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-star"></i> ${pkg.rating}
+                            </span>
+                        </div>
+
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-center gap-3 text-xs text-slate-400 font-semibold">
+                                <span><i class="fa-regular fa-clock text-brand-500"></i> ${pkg.durationText}</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-location-dot text-brand-500"></i> ${pkg.destination}</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold font-serif text-white group-hover:text-brand-400 transition-colors cursor-pointer" onclick="openDetailsModal('${pkg.id}')">
+                                ${pkg.title}
+                            </h3>
+
+                            <ul class="space-y-1.5 pt-1">
+                                ${pkg.highlights.slice(0, 3).map(h => `
+                                    <li class="text-xs text-slate-300 flex items-center gap-2">
+                                        <i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i> ${h}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0 border-t border-slate-800 flex items-center justify-between mt-4">
+                        <div>
+                            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Price / Person</span>
+                            <span class="text-2xl font-black text-brand-400">₹${pkg.price.toLocaleString()}</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="openDetailsModal('${pkg.id}')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs px-3.5 py-2.5 rounded-xl transition-colors">
+                                Details
+                            </button>
+                            <button onclick="openBookingWithPackage('${pkg.title}')" class="bg-brand-500 hover:bg-brand-600 text-slate-950 font-extrabold text-xs px-3.5 py-2.5 rounded-xl transition-colors">
+                                Book
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Open Modal Details
+        function openDetailsModal(pkgId) {
+            const pkg = allPackages.find(p => p.id === pkgId);
+            if(!pkg) return;
+
+            const modalContainer = document.getElementById('modalDetailsContainer');
+            modalContainer.innerHTML = `
+                <div class="relative h-64 sm:h-80">
+                    <img src="${pkg.image}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-800 via-navy-800/40 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="bg-brand-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">${pkg.style}</span>
+                        <h2 class="text-2xl sm:text-4xl font-black font-serif text-white mt-2">${pkg.title}</h2>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-700/80 pb-4">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold text-slate-300">
+                            <span><i class="fa-regular fa-clock text-brand-500"></i> ${pkg.durationText}</span>
+                            <span><i class="fa-solid fa-star text-amber-400"></i> ${pkg.rating} (${pkg.reviewsCount} reviews)</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-slate-400 block">Starting from</span>
+                            <span class="text-3xl font-black text-brand-400">₹${pkg.price.toLocaleString()}</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold uppercase tracking-wider text-xs text-brand-500 mb-3">Day-Wise Itinerary</h4>
+                        <div class="space-y-3">
+                            ${pkg.itinerary.map(day => `
+                                <div class="bg-slate-900/80 p-3.5 rounded-xl border-l-4 border-brand-500 text-xs sm:text-sm text-slate-300">
+                                    ${day}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold uppercase tracking-wider text-xs text-emerald-400 mb-2">Package Inclusions</h4>
+                            <ul class="space-y-1.5 text-xs text-slate-300">
+                                ${pkg.inclusions.map(inc => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> ${inc}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold uppercase tracking-wider text-xs text-rose-400 mb-2">Exclusions</h4>
+                            <ul class="space-y-1.5 text-xs text-slate-400">
+                                ${pkg.exclusions.map(exc => `<li class="flex items-center gap-2"><i class="fa-solid fa-xmark text-rose-400"></i> ${exc}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center gap-3">
+                        <button onclick="closeDetailsModal(); openBookingWithPackage('${pkg.title}');" class="w-full flex-1 bg-brand-500 hover:bg-brand-600 text-slate-950 font-extrabold py-3 rounded-xl transition-colors text-sm">
+                            Proceed to Book Tour
+                        </button>
+                        <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20inquire%20about%20${encodeURIComponent(pkg.title)}" target="_blank" class="w-full flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp Inquiry
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('detailsModal').classList.remove('hidden');
+        }
+
+        function closeDetailsModal() {
+            document.getElementById('detailsModal').classList.add('hidden');
+        }
+
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function openBookingWithPackage(pkgTitle) {
+            document.getElementById('bookPackage').value = pkgTitle;
+            openBookingModal();
+        }
+
+        // Live Price Estimator Calculations
+        function calculateEstimatedPrice() {
+            const selectPkg = document.getElementById('calcBasePackage');
+            const selectedOpt = selectPkg.options[selectPkg.selectedIndex];
+            const basePrice = parseFloat(selectedOpt.getAttribute('data-base')) || 0;
+
+            const adults = parseInt(document.getElementById('calcAdults').value);
+            const kids = parseInt(document.getElementById('calcKids').value);
+            document.getElementById('adultsCount').textContent = adults;
+            document.getElementById('kidsCount').textContent = kids;
+
+            const hotelTierSelect = document.getElementById('calcHotelTier');
+            const hotelMultiplier = parseFloat(hotelTierSelect.options[hotelTierSelect.selectedIndex].getAttribute('data-mult')) || 1.0;
+
+            const transportCost = parseFloat(document.getElementById('calcTransport').value) || 0;
+
+            let addOnPerPerson = 0;
+            document.querySelectorAll('.calc-addon:checked').forEach(cb => {
+                addOnPerPerson += parseFloat(cb.value);
+            });
+
+            // Formula: ((Base * HotelMult) + Addons) * (Adults + 0.6*Kids) + Transport
+            const totalPeopleFactor = adults + (kids * 0.6);
+            let subtotal = ((basePrice * hotelMultiplier) + addOnPerPerson) * totalPeopleFactor + transportCost;
+
+            // Group discount for 4+ adults
+            if(adults >= 4) {
+                subtotal *= 0.92; // 8% group discount
+            }
+
+            document.getElementById('calculatedTotal').textContent = '₹' + Math.round(subtotal).toLocaleString();
+        }
+
+        function openBookingFromCalculator() {
+            const pkgSelect = document.getElementById('calcBasePackage');
+            const pkgName = pkgSelect.options[pkgSelect.selectedIndex].text.split(' (')[0];
+            document.getElementById('bookPackage').value = pkgName;
+            document.getElementById('bookAdults').value = document.getElementById('calcAdults').value;
+            document.getElementById('bookKids').value = document.getElementById('calcKids').value;
+            openBookingModal();
+        }
+
+        // Custom Tour Builder WhatsApp generator
+        function submitCustomBuilder() {
+            const selectedDests = Array.from(document.querySelectorAll('.builder-dest:checked')).map(cb => cb.value);
+            const hotel = document.getElementById('builderHotel').value;
+            const transport = document.getElementById('builderTransport').value;
+            const activities = Array.from(document.querySelectorAll('.builder-act:checked')).map(cb => cb.value);
+
+            if(selectedDests.length === 0) {
+                alert('Please select at least one destination in Step 1.');
+                return;
+            }
+
+            let msg = `*Custom Tour Request - Incredible Tour and Travels*\n\n`;
+            msg += `📍 *Destinations:* ${selectedDests.join(', ')}\n`;
+            msg += `🏨 *Accommodation:* ${hotel}\n`;
+            msg += `🚘 *Vehicle:* ${transport}\n`;
+            msg += `⚽ *Activities:* ${activities.length > 0 ? activities.join(', ') : 'Standard Sightseeing'}\n\n`;
+            msg += `Please send me a customized itinerary quote.`;
+
+            window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // Direct WhatsApp Booking Trigger
+        function sendWhatsAppBooking() {
+            const name = document.getElementById('bookName').value;
+            const phone = document.getElementById('bookPhone').value;
+            const pkg = document.getElementById('bookPackage').value;
+            const date = document.getElementById('bookDate').value;
+            const adults = document.getElementById('bookAdults').value;
+            const kids = document.getElementById('bookKids').value;
+            const notes = document.getElementById('bookNotes').value;
+
+            if(!name || !phone || !date) {
+                alert('Please complete your name, phone number, and departure date.');
+                return;
+            }
+
+            let msg = `*New Booking Request*\n\n`;
+            msg += `👤 *Name:* ${name}\n`;
+            msg += `📞 *Phone:* ${phone}\n`;
+            msg += `🗺️ *Package:* ${pkg}\n`;
+            msg += `📅 *Date:* ${date}\n`;
+            msg += `👥 *Travelers:* ${adults} Adults, ${kids} Children\n`;
+            if(notes) msg += `📝 *Notes:* ${notes}\n`;
+
+            window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, '_blank');
+            closeBookingModal();
+        }
+
+        // FAQ Accordion
+        function toggleFaqAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Initialization & Event Binding
+        window.addEventListener('DOMContentLoaded', () => {
+            renderPackages(allPackages);
+
+            // Filter Application
+            document.getElementById('applyFiltersBtn').addEventListener('click', () => {
+                const dest = document.getElementById('filterDest').value;
+                const style = document.getElementById('filterStyle').value;
+                const duration = document.getElementById('filterDuration').value;
+                const budget = parseFloat(document.getElementById('filterBudget').value);
+
+                let filtered = allPackages.filter(pkg => {
+                    let matchDest = (dest === 'all' || pkg.destination === dest);
+                    let matchStyle = (style === 'all' || pkg.style === style);
+                    let matchBudget = (pkg.price <= budget);
+
+                    let matchDuration = true;
+                    if(duration === 'short') matchDuration = pkg.durationDays <= 3;
+                    else if(duration === 'medium') matchDuration = pkg.durationDays >= 4 && pkg.durationDays <= 6;
+                    else if(duration === 'long') matchDuration = pkg.durationDays >= 7;
+
+                    return matchDest && matchStyle && matchBudget && matchDuration;
+                });
+
+                renderPackages(filtered);
+                document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Calculator Listeners
+            document.getElementById('calcBasePackage').addEventListener('change', calculateEstimatedPrice);
+            document.getElementById('calcAdults').addEventListener('input', calculateEstimatedPrice);
+            document.getElementById('calcKids').addEventListener('input', calculateEstimatedPrice);
+            document.getElementById('calcHotelTier').addEventListener('change', calculateEstimatedPrice);
+            document.getElementById('calcTransport').addEventListener('change', calculateEstimatedPrice);
+            document.querySelectorAll('.calc-addon').forEach(cb => cb.addEventListener('change', calculateEstimatedPrice));
+            calculateEstimatedPrice();
+
+            // Mobile Nav Toggle
+            document.getElementById('mobileNavToggle').addEventListener('click', () => {
+                document.getElementById('mobileDrawer').classList.toggle('hidden');
+            });
+
+            // Booking Form Submit
+            document.getElementById('bookingForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your travel request has been submitted successfully. Our team will contact you within 15 minutes.');
+                closeBookingModal();
+                e.target.reset();
+            });
+        });
+    </script>
+</body>
+</html>
